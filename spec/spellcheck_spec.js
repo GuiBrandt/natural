@@ -81,7 +81,7 @@ describe('spellcheck', function () {
   })
 
   describe('special cases', function () {
-    const spellcheck = new Spellcheck(['cat'])
+    const spellcheck = new Spellcheck(['cat', 'cab', 'bat', 'bag'])
 
     it('should return the input word as the most probable correction if it is already correct', function () {
       expect(spellcheck.getCorrections('cat').indexOf('cat')).toBe(0)
